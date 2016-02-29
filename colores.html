@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+     <title>Colores</title>
+     <style type="text/css">
+        #colores {
+            background-color: blue;
+          }
+    </style>
+</head>
+   </head>
+   <body>
+     <form>
+       Color: <input type="text" id="text"/>
+     </form>
+     <p id="colores">Colores</p>
+
+     <script type="text/javascript" charset="utf-8">
+        // Set up function, to attach to onLoad
+        formElement = document.getElementById('text');
+        colorElement = document.getElementById('colores');
+        // Handler function, to provide to addEventListener
+        handler = function (e) {
+            colorElement.style.backgroundColor = this.value;
+          };
+        formElement.addEventListener('input', handler);
+     </script>
+   </body>
+</html>
